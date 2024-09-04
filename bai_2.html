@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sumOfDivisors(n) {
+        if (n <= 1) return 0;
+        let total = 1; // 1 la uoc so thuc su cua moi so duong n
+        let sqrtN = Math.sqrt(n);
+
+        for (let i = 2; i <= sqrtN; i++) {
+            if (n % i === 0) {
+                total += i;
+                if (i !== n / i) {
+                    total += n / i;
+                }
+            }
+        }
+
+        return total;
+    }
+
+    function areAmicableNumbers(a, b) {
+        // ktra dkien dau vao
+        if (a <= 0 || b <= 0 || a === b) return false;
+
+        // ktra dkien so ban huu
+        return sumOfDivisors(a) === b && sumOfDivisors(b) === a;
+    }
+
+    // VD su dung
+    console.log(areAmicableNumbers(220, 284)); // true
+    console.log(areAmicableNumbers(123, 456)); // false
+
+</script>
+</body>
+</html>

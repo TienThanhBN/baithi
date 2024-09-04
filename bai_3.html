@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>http://quanlisach.com</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        thead {
+            background-color: #F2F2F2;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .form-container input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Quản lí sách</h2>
+</div>
+<table id="bookTable">
+    <thead>
+    <tr>
+        <th>Mã số sách</th>
+        <th>Tên sách</th>
+        <th>Năm xuất bản</th>
+        <th>Số lượng</th>
+        <th>Tình trạng</th>
+    </tr>
+    <tr>
+        <th>12345</th>
+        <th>Toán</th>
+        <th>2000</th>
+        <th>3</th>
+        <th>True</th>
+    </tr>
+    <tr>
+        <th>23456</th>
+        <th>Văn</th>
+        <th>1998</th>
+        <th>4</th>
+        <th>True</th>
+    </tr>
+    <tr>
+        <th>37456</th>
+        <th>Tiếng Anh</th>
+        <th>1999</th>
+        <th>5</th>
+        <th>False</th>
+    </tr>
+    </thead>
+    <tbody id="bookTableBody">
+    </tbody>
+</table>
+<script src="bai_3.js"></script>
+</body>
+</html>
